@@ -11,8 +11,6 @@
 
 
 <h2 id="faetures" >🎨  Features </h2>
-
-The PokeDox preview:
 <ul>
 <li>Responsive and interactive web page that displays a list of products.</li>
 <li>Filtering of products based on category,price,color.</li>
