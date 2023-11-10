@@ -64,13 +64,13 @@ const ListProducts = ({ products }) => {
     <Wrapper>
       {products
         .slice(firstIndex, lastIndex)
-        .map(({ name, image, id, price, description }) => (
+        .map(({ title, image, id, price, description }) => (
           <ProductCard key={id}>
             <ProductImage>
-              <img src={image} alt={name} />
+              <img src={image} alt={title} />
             </ProductImage>
             <ProductInfo>
-              <h3>{name}</h3>
+              <h3>{title}</h3>
               <p className="price">${price}</p>
               <p>{description}</p>
               <Button variant="primary">Details</Button>

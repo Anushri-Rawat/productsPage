@@ -37,8 +37,8 @@ const ProductCard = styled.div`
   }
   img {
     width: 100%;
-    height: 65%;
-    object-fit: cover;
+    height: 150px;
+    object-fit: contain;
   }
 `;
 
@@ -61,13 +61,13 @@ const GridProducts = ({ products }) => {
     <Wrapper>
       {products
         .slice(firstIndex, lastIndex)
-        .map(({ name, id, image, price }) => (
+        .map(({ title, id, image, price, rating }) => (
           <ProductCard key={id}>
-            <img src={image} alt={name} />
-            <h3>{name}</h3>
+            <img src={image} alt={title} />
+            <h3>{title}</h3>
             <Rating>
-              <p>{formatPrice(price)}</p>
-              <Stars rate={Math.random() * 4 + 1} />
+              <p>{price}</p>
+              <Stars rate={rating.rate || Math.random() * 4 + 1} />
             </Rating>
           </ProductCard>
         ))}

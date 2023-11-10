@@ -136,7 +136,7 @@ const Filters = () => {
 
   const categoryData = getUniqueData(all_products, "category");
   const companyData = getUniqueData(all_products, "company");
-  const colorsData = getUniqueColor(all_products, "colors");
+  // const colorsData = getUniqueColor(all_products, "colors");
 
   return (
     <Wrapper>
@@ -195,7 +195,7 @@ const Filters = () => {
           </form>
         </div>
 
-        <div className="form__control colors">
+        {/* <div className="form__control colors">
           <h4>Colors</h4>
 
           <div className="filter-color-style">
@@ -233,11 +233,11 @@ const Filters = () => {
               );
             })}
           </div>
-        </div>
+        </div> */}
 
         <div className="form__control">
           <h4>Price</h4>
-          <p className="price">{price / 100}</p>
+          <p className="price">{price}</p>
           <input
             type="range"
             name="price"
